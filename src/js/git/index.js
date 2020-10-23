@@ -802,9 +802,9 @@ GitEngine.prototype.printRemotes = function(options) {
   var result = '';
   if (options.verbose) {
     result += 'origin (fetch)\n';
-    result += TAB + 'git@github.com:pcottle/foo.git' + '\n\n';
+    result += TAB + 'git@github.com:olsza/test.git' + '\n\n';
     result += 'origin (push)\n';
-    result += TAB + 'git@github.com:pcottle/foo.git';
+    result += TAB + 'git@github.com:olsza/test.git';
   } else {
     result += 'origin';
   }
