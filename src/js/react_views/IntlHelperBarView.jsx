@@ -25,7 +25,7 @@ class IntlHelperBarView extends React.Component{
 
   getItems() {
     return [{
-      text: 'Git Branching',
+      text: 'English',
       testID: 'english',
       onClick: function() {
         this.fireCommand('locale en_US; levels');
