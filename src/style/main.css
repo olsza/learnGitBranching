@@ -103,6 +103,7 @@ body,
   -moz-box-flex: 10;
   -ms-flex: 10.0 10.0 auto;
   flex: 10 10 auto;
+  left: 400px;
 }
 
 html,
