@@ -9,9 +9,9 @@ describe('LocaleStore', function() {
   });
 
   it('changes locales', function() {
+    expect(LocaleStore.getLocale()).toEqual('pl');
+    LocaleActions.changeLocale('en_US');
     expect(LocaleStore.getLocale()).toEqual('en_US');
-    LocaleActions.changeLocale('ja_JP');
-    expect(LocaleStore.getLocale()).toEqual('ja_JP');
   });
 
   it('changes locales from headers', function() {
