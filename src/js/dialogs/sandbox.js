@@ -737,7 +737,9 @@ exports.dialog = {
         '',
         'Masz dość tego okna? Dodaj `?NODEMO` do adresu URL, aby się go pozbyć, w ten sposób:',
         '',
-        '[http://git-nauka.czlowiek.it/?NODEMO](?NODEMO)'
+        '[http://git-nauka.czlowiek.it/?NODEMO](?NODEMO)',
+        '',
+        'ps. Aplikacja ta jest kopią <a href="https://learngitbranching.js.org" target="_blank">Learn Git Branching</a>, lecz przetłumacząny na język polski'
       ]
     }
   }, {
