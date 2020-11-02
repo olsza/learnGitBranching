@@ -733,11 +733,11 @@ exports.dialog = {
         '',
         'Jeśli nie widziałeś tej demonstracji, możesz ją obejrzeć tutaj:',
         '',
-        '[https://pcottle.github.io/learnGitBranching/?demo](https://pcottle.github.io/learnGitBranching/?demo)',
+        '[http://git-nauka.czlowiek.it/?demo](http://git-nauka.czlowiek.it/?demo)',
         '',
         'Masz dość tego okna? Dodaj `?NODEMO` do adresu URL, aby się go pozbyć, w ten sposób:',
         '',
-        '[https://pcottle.github.io/learnGitBranching/?NODEMO](?NODEMO)'
+        '[http://git-nauka.czlowiek.it/?NODEMO](?NODEMO)'
       ]
     }
   }, {
