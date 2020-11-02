@@ -6,7 +6,7 @@ var util = require('../util');
 var EventEmitter = require('events').EventEmitter;
 
 var ActionTypes = AppConstants.ActionTypes;
-var DEFAULT_LOCALE = 'en_US';
+var DEFAULT_LOCALE = 'pl';
 
 // resolve the messy mapping between browser language
 // and our supported locales
