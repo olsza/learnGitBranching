@@ -2718,7 +2718,7 @@ GitEngine.prototype.status = function() {
   }
   lines.push('Changes to be committed:');
   lines.push('');
-  lines.push(TAB + 'modified: cal/OskiCostume.stl');
+  lines.push(TAB + 'modified: plik/Olsza.stl');
   lines.push('');
   lines.push(intl.str('git-status-readytocommit'));
 
