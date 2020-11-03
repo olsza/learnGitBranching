@@ -726,20 +726,16 @@ exports.dialog = {
         '"Learn Git Branching" to najbardziej wizualny i interaktywny sposób na naukę GIT-a w sieci.',
         'Będziesz miał do czynienia z ekscytującymi poziomami wraz z pokazaniem krok po kroku potężnych funkcji, a może nawet z odrobiną zabawy po drodze.',
         '',
-        'Jeśli jesteś początkujący, po prostu zacznij od pierwszego poziomu.',
-        'Jeśli znasz już podstawy GIT-a, wypróbuj niektóre z naszych późniejszych, bardziej wymagających poziomów.',
+        'Jeśli jesteś początkujący, po prostu zacznij od pierwszego poziomu z sekcji wrowadzającej.',
+        'Jeśli znasz już podstawy GIT-a, wypróbuj niektóre z naszych, bardziej wymagających poziomów lub baw się w "[piskownicy](?NODEMO)" dodając do adresu `?NODEMO`',
         '',
-        '# Demo!',
+        '### Zobacz [Demo](?demo)!',
         '',
-        'Jeśli nie widziałeś tej demonstracji, możesz ją obejrzeć tutaj:',
+        '<sub>PS. Na tej stronie dostępne są tylko zadania przetłumaczone na PL, a nowe zadania będą odsłaniane z biegem czasu ;)',
+        'dlatego zaglądaj na tą stronę, co jakiś czas :)<br>\nPozdrawiam <a href="https://twitter.com/czlowiek_it" target="_blank">Olsza</a></sub>',
         '',
-        '[http://git-nauka.czlowiek.it/?demo](http://git-nauka.czlowiek.it/?demo)',
         '',
-        'Masz dość tego okna? Dodaj `?NODEMO` do adresu URL, aby się go pozbyć, w ten sposób:',
-        '',
-        '[http://git-nauka.czlowiek.it/?NODEMO](?NODEMO)',
-        '',
-        'ps. Aplikacja ta jest kopią <a href="https://learngitbranching.js.org" target="_blank">Learn Git Branching</a>, lecz przetłumacząny na język polski'
+        '<sub><sup>Aplikacja ta jest kopią <a href="https://learngitbranching.js.org" target="_blank">Learn Git Branching</a>, która jest w wersji oryginalnej językowej EN i zawiera wszytkie zadania.</sup></sub>'
       ]
     }
   }, {
