@@ -23,12 +23,12 @@ class CommandsHelperBarView extends React.Component {
 
   getItems() {
     return [{
-      text: 'Levels',
+      text: 'Poziomy',
       onClick: function() {
         this.fireCommand('levels');
       }.bind(this),
     }, {
-      text: 'Solution',
+      text: 'Rozwiązanie',
       onClick: function() {
         this.fireCommand('show solution');
       }.bind(this),
@@ -38,17 +38,17 @@ class CommandsHelperBarView extends React.Component {
         this.fireCommand('reset');
       }.bind(this),
     }, {
-      text: 'Undo',
+      text: 'Cofnij',
       onClick: function() {
         this.fireCommand('undo');
       }.bind(this),
     }, {
-      text: 'Objective',
+      text: 'Cel',
       onClick: function() {
         this.fireCommand('objective');
       }.bind(this),
     }, {
-      text: 'Help',
+      text: 'Pomoc',
       onClick: function() {
         this.fireCommand('help general; git help');
       }.bind(this)
