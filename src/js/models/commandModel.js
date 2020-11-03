@@ -187,7 +187,7 @@ var Command = Backbone.Model.extend({
 
   validateAtInit: function() {
     if (this.get('rawStr') === null) {
-      throw new Error('Give me a string!');
+      throw new Error('Daj ciąg tekstowy!');
     }
     if (!this.get('createTime')) {
       this.set('createTime', new Date().toString());
@@ -228,7 +228,7 @@ var Command = Backbone.Model.extend({
 
     // if we reach here, this command is not supported :-/
     this.set('error', new CommandProcessError({
-        msg: 'The command "' + this.get('rawStr') + '" isn\'t supported, sorry!'
+        msg: 'Komenda "' + this.get('rawStr') + '" nie jest obsługiwane, przepraszam!'
       })
     );
   },
