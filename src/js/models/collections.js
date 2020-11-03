@@ -84,7 +84,7 @@ var CommandBuffer = Backbone.Model.extend({
 
     var eventName = command.get('eventName');
     if (!eventName) {
-      throw new Error('I need an event to trigger when this guy is parsed and ready');
+      throw new Error('Potrzebuję zdarzenia, które uruchomi się, gdy ten typ zostanie przeanalizowany i gotowy.');
     }
 
     var Main = require('../app');
@@ -94,8 +94,8 @@ var CommandBuffer = Backbone.Model.extend({
     if (!numListeners) {
       var Errors = require('../util/errors');
       command.set('error', new Errors.GitError({
-        msg: 'That command is valid, but not supported in this current environment!' +
-             ' Try entering a level or level builder to use that command'
+        msg: 'To polecenie jest poprawne, ale nie jest obsługiwane w obecnym środowisku!' +
+             ' Wybierz poziom lub zbuduj własny poziom, aby użyć tego polecenia.'
       }));
       deferred.resolve();
       return;
