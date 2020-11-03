@@ -105,10 +105,10 @@ var insertAlternateLinks = function(pageId) {
   // and optionally a region (in ISO 3166-1 Alpha 2 format) of an alternate URL
 
   var altLinks = LocaleStore.getSupportedLocales().map(function(langCode) {
-    var url = "https://learngitbranching.js.org/?locale=" + langCode;
+    var url = "//git-nauka.czlowiek.it/?locale=" + langCode;
     return '<link rel="alternate" hreflang="'+langCode+'" href="' + url +'" />';
   });
-  var defaultUrl = "https://learngitbranching.js.org/?locale=" + LocaleStore.getDefaultLocale();
+  var defaultUrl = "//git-nauka.czlowiek.it/?locale=" + LocaleStore.getDefaultLocale();
   altLinks.push('<link rel="alternate" hreflang="x-default" href="' + defaultUrl +'" />');
   $('head').prepend(altLinks);
 
