@@ -727,7 +727,7 @@ exports.dialog = {
         'Będziesz miał do czynienia z ekscytującymi poziomami wraz z pokazaniem krok po kroku potężnych funkcji, a może nawet z odrobiną zabawy po drodze.',
         '',
         'Jeśli jesteś początkujący, po prostu zacznij od pierwszego poziomu z sekcji wrowadzającej.',
-        'Jeśli znasz już podstawy GIT-a, wypróbuj niektóre z naszych, bardziej wymagających poziomów lub baw się w "[piskownicy](?NODEMO)" dodając do adresu `?NODEMO`',
+        'Jeśli znasz już podstawy GIT-a, wypróbuj niektóre z nasze, bardziej wymagających poziomów lub baw się w "[piskownicy](?NODEMO)" dodając do adresu `?NODEMO`',
         '',
         '### Zobacz [Demo](?demo)!',
         '',
