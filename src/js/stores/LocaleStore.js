@@ -12,27 +12,27 @@ var DEFAULT_LOCALE = 'pl';
 // and our supported locales
 var langLocaleMap = {
   en: 'en_US',
-  zh: 'zh_CN',
-  ja: 'ja',
-  ko: 'ko',
-  es: 'es_AR',
-  fr: 'fr_FR',
-  de: 'de_DE',
-  pt: 'pt_BR',
-  ru: 'ru_RU',
-  uk: 'uk',
-  vi: 'vi',
-  sl: 'sl_SI',
+  // zh: 'zh_CN',
+  // ja: 'ja',
+  // ko: 'ko',
+  // es: 'es_AR',
+  // fr: 'fr_FR',
+  // de: 'de_DE',
+  // pt: 'pt_BR',
+  // ru: 'ru_RU',
+  // uk: 'uk',
+  // vi: 'vi',
+  // sl: 'sl_SI',
   pl: 'pl'
 };
 
 var headerLocaleMap = {
-  'zh-CN': 'zh_CN',
-  'zh-TW': 'zh_TW',
-  'pt-BR': 'pt_BR',
-  'es-MX': 'es_MX',
-  'es-ES': 'es_ES',
-  'sl-SI': 'sl_SI'
+  // 'zh-CN': 'zh_CN',
+  // 'zh-TW': 'zh_TW',
+  // 'pt-BR': 'pt_BR',
+  // 'es-MX': 'es_MX',
+  // 'es-ES': 'es_ES',
+  // 'sl-SI': 'sl_SI'
 };
 
 var supportedLocalesList = Object.values(langLocaleMap)
