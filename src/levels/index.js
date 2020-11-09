@@ -111,7 +111,7 @@ var sequenceInfo = exports.sequenceInfo = {
       'ko'   : '다음 단계로',
       'vi'   : 'Tăng tốc',
       'sl_SI': 'Prva Stopnička',
-      'pl'   : 'Rozkręcenie'
+      'pl'   : 'Pogłębianie wiedzy'
     },
     about: {
       'en_US': 'The next serving of 100% git awesomes-ness. Hope you\'re hungry',
