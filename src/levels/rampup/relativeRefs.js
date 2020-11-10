@@ -17,7 +17,8 @@ exports.level = {
     "ko"   : "상대 참조 (^) (Relative Refs)",
     "uk": "Відносні посилання",
     "vi": "Tham chiếu tương đối (^)",
-    "sl_SI": "Relativne Reference (^)"
+    "sl_SI": "Relativne Reference (^)",
+    "pl"   : "Odniesienia względne (^)"
   },
   "hint": {
     "en_US": "Remember the Caret (^) operator!",
@@ -34,7 +35,8 @@ exports.level = {
     "ko"   : "(^)연산자를 기억하세요!",
     "uk": "Не забудь оператор `^`",
     "vi": "Đừng quên dấu mũ (^)!",
-    "sl_SI": "Spomni se na (^) operator!"
+    "sl_SI": "Spomni se na (^) operator!",
+    "pl"   : "Pamiętaj o operatorze \"daszek\" (^)!"
   },
   "startDialog": {
     "en_US": {
@@ -1157,6 +1159,81 @@ exports.level = {
               "Za dokončanje te stopnje, checkoutaj starša commita `bugFix`. To bo ločilo `HEAD`.",
               "",
               "Hash lahko določiš, če želiš, ampak probaj raje z relativnimi referencami!"
+            ]
+          }
+        }
+      ]
+    },
+    "pl": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "## Odwołania względne (Refs)",
+              "",
+              "Poruszanie się po GIT przez określenie skrótów (hash) commit-ów może być nieco uciążliwe. W prawdziwym świecie nie będziesz mieć ładnej wizualizacji drzewa zatwierdzeń obok terminala, więc będziesz musiał użyć `git log`, aby zobaczyć hash-e.",
+              "",
+              "Co gorsza, skróty są generalnie znacznie dłuższe, jak również w prawdziwym GIT. Na przykład, hash commit, który wprowadził poprzedni poziom jest `fed2da64c0efc5293610bdd892f82a58e8cbc5d8`. Nie jest to szczególnie łatwe do zapamiętania...",
+              "",
+              "Ciekawostką jest to, że GIT jest całkiem sprytny z hash-ami. Wymaga jedynie podania wystarczającej liczby znaków, aby jednoznacznie zidentyfikować commit. Można więc po prostu wpisać `fed2` zamiast tego długiego ciągu powyżej."
+            ]
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Jak powiedziałem, określanie commit-ów przez ich hash nie jest najwygodniejszą sposobem, dlatego GIT ma odwołania względne. Oni są niesamowici!",
+              "",
+              "Dzięki odwołań względnych możesz zacząć od miejsca, które da się zapamiętać (np. branch `bugFix` lub `HEAD`) i tam pracować.",
+              "",
+              "Odwołania względne są potężne, ale przedstawimy tutaj tylko dwa proste sposoby:",
+              "",
+              "* Przechodzenie w górę o jednen commit za pomocą `^`",
+              "* Przechodzenie w górę o kilka commit-ów za pomocą `~<liczba>`"
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Przyjrzyjmy się najpierw operatorowi ^. Za każdym razem, gdy dodajesz go do nazwy odniesienia, mówisz GIT-owi, aby użył rodzica podanego w commit-cie.",
+              "",
+              "Zatem powiedzenie `master^` jest równoważne z \"pierwszym rodzicem `master`\".",
+              "",
+              "`master^^` jest dziadkiem `master`(drugie pokolenie przodków)",
+              "",
+              "Sprawdźmy tutaj commit, który jest przed master."
+            ],
+            "afterMarkdowns": [
+              "Bum! Gotowe. O wiele łatwiejsze niż wpisanie skrótu (hash) commit-ów."
+            ],
+            "command": "git checkout master^",
+            "beforeCommand": "git commit"
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Możesz również odwołać się do `HEAD` jako odwołania względnego. Użyjmy tego kilka razy, aby cofnąć się w naszym drzewie."
+            ],
+            "afterMarkdowns": [
+              "Łatwe! Możemy cofnąć się w czasie za pomocą `HEAD^`"
+            ],
+            "command": "git checkout C3; git checkout HEAD^; git checkout HEAD^; git checkout HEAD^",
+            "beforeCommand": "git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Aby ukończyć ten poziom, przełącz się do rodzica commit-a `bugFix`. Spowoduje to odłączenie `HEAD`.",
+              "",
+              "Możesz określić hash, jeśli chcesz, ale zamiast tego spróbuj użyć odwołania względnego!"
             ]
           }
         }
