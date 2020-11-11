@@ -17,7 +17,8 @@ exports.level = {
     "ko"   : "이번 레벨을 완료하려면 최소 한번은 직접 참조(해시)를 사용해야 합니다.",
     "uk": "Тобі потрібно використати як мінімум одне пряме посилання (хеш) щоб пройти цей рівень",
     "vi": "Bạn sẽ cần dùng ít nhất một tham chiếu trực tiếp (mã băm) để hoàn thành cấp độ này",
-    "sl_SI": "Moral boš uporabiti vsaj eno direktno referenco (hash) za dokončanje te stopnje."
+    "sl_SI": "Moral boš uporabiti vsaj eno direktno referenco (hash) za dokončanje te stopnje.",
+    "pl"   : "Aby ukończyć ten poziom, musisz użyć co najmniej jednego bezpośredniego odniesienia (hash)"
   },
   "name": {
     "en_US": "Relative Refs #2 (~)",
@@ -34,7 +35,8 @@ exports.level = {
     "ko"   : "상대 참조 #2 (~)",
     "uk": "Відносні посилання №2",
     "vi": "Tham chiếu tương đối #2 (~)",
-    "sl_SI": "Relativne Reference #2 (~)"
+    "sl_SI": "Relativne Reference #2 (~)",
+    "pl"   : "Odwołania względne #2 (~)"
   },
   "startDialog": {
     "en_US": {
@@ -1050,6 +1052,75 @@ exports.level = {
               "Sedaj ko smo si pogledali relativne reference in force branchanje v kombinaciji, uporabimo to, da rešimo naslednjo stopnjo.",
               "",
               "Za dokončanje te stopnje, premakni `HEAD`, `master` in `bugFix` na njihove ciljne prikazane destinacije."
+            ]
+          }
+        }
+      ]
+    },
+    "pl": {
+      "childViews": [
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "### Operator \"~\"",
+              "",
+              "Powiedzmy, że chcesz cofnąć się o kilka poziomów w swoim drzewie zatwierdzeń. Kilkakrotne wpisanie `^` może być uciążliwe, więc GIT ma również operator tyldy (~).",
+              "",
+              "",
+              "Operator tyldy (opcjonalnie) przyjmuje liczbę, która określa ilość rodziców, o których chcesz się cofnąć. Zobaczmy to w akcji."
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Określmy liczbę wstecz commit-ów za pomocą `~`."
+            ],
+            "afterMarkdowns": [
+              "Bum! Odwołania względne są świetne."
+            ],
+            "command": "git checkout HEAD~4",
+            "beforeCommand": "git commit; git commit; git commit"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "### Wymuszanie branch-y",
+              "",
+              "Jesteś teraz ekspertem od odwołań względnych, więc *używajmy* ich do czegoś.",
+              "",
+              "Jednym z najczęstszych sposobów używania odwołań względnych jest przesuwanie branch-y. Możesz bezpośrednio ponownie przypisać branch do commit-a za pomocą opcji `-f`. Więc coś takiego:",
+              "",
+              "`git branch -f master HEAD~3`",
+              "",
+              "przesuwa (siłą) branch master o trzech rodziców za HEAD."
+            ]
+          }
+        },
+        {
+          "type": "GitDemonstrationView",
+          "options": {
+            "beforeMarkdowns": [
+              "Zobaczmy, jak działa poprzednie polecenie."
+            ],
+            "afterMarkdowns": [
+              "No to jedziemy! Odwołania względne dały nam zwięzły sposób odniesienia się do `C1`, a wymuszanie (`-f`) branch-a umożliwiło szybkie przeniesienie branch-a do tej lokalizacji."
+            ],
+            "command": "git branch -f master HEAD~3",
+            "beforeCommand": "git commit; git commit; git commit; git checkout -b bugFix"
+          }
+        },
+        {
+          "type": "ModalAlert",
+          "options": {
+            "markdowns": [
+              "Teraz, gdy widziałeś już odwołania względne i wymuszanie branch-y w połączeniu, użyjmy ich do rozwiązania następnego poziomu.",
+              "",
+              "Aby ukończyć ten poziom, przenieś `HEAD`, `master` i `bugFix` do pokazanych celów."
             ]
           }
         }
